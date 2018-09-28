@@ -33,7 +33,7 @@ body {
 	min-width: 320px;
 	position: relative;
 	overflow-x: hidden;
-	background: #fff;
+	background: #ccc;
 	-webkit-background-size: cover;
 	background-size: cover;
 	opacity: 1;
@@ -48,20 +48,20 @@ h1, h2, h3, h4, h5, h6 {
 	margin: 0;
 }
 h1 {
-	//font-size: 48px;
-	//line-height: 48px;
+	/*//font-size: 48px;
+	//line-height: 48px;*/
 }
 h2 {
-	//font-size: 30px;
-	//line-height: 30px;
+	/*//font-size: 30px;
+	//line-height: 30px;*/
 }
 h3 {
-	//font-size: 25px;
-	//line-height: 25px;
+	/*//font-size: 25px;
+	//line-height: 25px;*/
 }
 h4 {
-	//font-size: 21px;
-	//line-height: 21px;
+	/*//font-size: 21px;
+	//line-height: 21px;*/
 }
 .hidden {
 	display: none;
@@ -124,15 +124,178 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 /* HEADER =========================
 ==============================================*/
 
-.header {
-	
+.default-button {
+	display: inline-block;
+	color: #ffffff;
+	font-family: 'Roboto-Condensed', sans-serif;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: 700;
+	padding: 17px 24px;
+	border-radius: 28px;
 }
-h1 {
-	color: red;
+.brilliant {
+	background-color: #5153d4;
+}
+.white-button {
+	border: 2px solid #ffffff;
+}
+
+.header {
+	position: relative;
+	padding-top: 40px;
+	min-height: 750px;
+}
+.content-header {
+	position: relative;
+	margin-top: 98px;
+}
+.content-header h1 {
+	font-family: 'Roboto', sans-serif;
+	color: #ffffff;
+	font-size: 80px;
+	font-weight: 700;
+	line-height: 80px;
+	text-transform: uppercase;
+	margin-bottom: 22px;
+}
+.content-header p {
+	max-width: 524px;
+	color: #ffffff;
+	font-family: 'Roboto', sans-serif;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 32px;
+	letter-spacing: 0.25px;
+	margin-bottom: 83px;
+}
+.content-header .brilliant {
+	margin-right: 16px;
+}
+
+.overlay-one {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translate(-60%, 0);
+	-ms-transform: translate(-60%, 0);
+	-o-transform: translate(-60%, 0);
+	transform: translate(-60%, 0);
+	display: inline-block;
+	width: 1248px;
+	height: 750px;
+	background-image: url(../img/header-main-bg.svg);
+	background-repeat: no-repeat;
+}
+.overlay-two {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	display: inline-block;
+	width: 1313px;
+	height: 620px;
+	background-image: url(../img/header-top-bg.svg);
+	background-repeat: no-repeat;
+	background-position: bottom center;
+}
+.phone-person {
+	position: absolute;
+	bottom: 0;
+	right: -45px;
+	-webkit-transform: translate(-50%, 0);
+	-ms-transform: translate(-50%, 0);
+	-o-transform: translate(-50%, 0);
+	transform: translate(-50%, 0);
+	display: inline-block;
+	width: 597px;
+	height: 511px;
+	background-image: url(../img/phone-person.png);
+	background-repeat: no-repeat;
+	-webkit-background-size: contain;
+	background-size: contain;
+}
+
+.logo img {
+}
+.social-link {
+	text-align: right;
+}
+.social-link ul {
+	display: inline-block;
+	list-style: none;
+}
+.social-link ul li {
+	float: left;
+	margin-right: 20px;
+}
+.social-link ul li:last-chold {
+	margin-right: 0;
+}
+.social-link__icons {
+	position: relative;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30px;
+	height: 30px;
+	border-radius: 24px;
+	border: 1px solid #ffffff;
+	background: rgba(255, 255, 255, 0.2);
+	-webkit-transition: all .25s ease-out;
+	-o-transition: all .25s ease-out;
+	transition: all .25s ease-out;
+}
+.social-link__icons:hover {
+	background: rgba(255, 255, 255, 0);
+}
+.icons-socials {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	content: "";
+	display: block;
+}
+.icons-fb {
+	width: 7px;
+	height: 13px;
+	background-image: url(../img/fb.svg);
+}
+.icons-in {
+	width: 13px;
+	height: 12px;
+	background-image: url(../img/linkedin.svg);
+}
+.icons-instagram {
+	width: 14px;
+	height: 13px;
+	background-image: url(../img/instagram.svg);
+}
+.icons-twitter {
+	width: 12px;
+	height: 11px;
+	background-image: url(../img/Twitter.svg);
 }
 
 /* MAIN STYLE =====================
 ==============================================*/
+
+.border-block {
+	width: 400px;
+	height: 400px;
+	background: #334;
+}
 
 /* Slider  ==============
 ==================================*/
