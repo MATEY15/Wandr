@@ -11,19 +11,19 @@
 	max-width: 100%;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 10px;
-	padding-right: 10px;
+	/*padding-left: 10px;*/
+	/*padding-right: 10px;*/
 }
 .row {
-	//margin-left: -10px;
-	//margin-right: -10px;
+	/*margin-left: -10px;*/
+	/*margin-right: -10px;*/
 }
 .row:after {
-	//display: block;
-	//height: 0;
-	//content: ".";
-	//visibility: hidden;
-	//clear: both;
+	/*display: block;*/
+	/*height: 0;*/
+	/*content: ".";*/
+	/*visibility: hidden;*/
+	/*clear: both;*/
 }
 .col_1 {width: 8.333333333333333%}
 .col_1-5 {width: 20%}

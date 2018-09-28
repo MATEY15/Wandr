@@ -1,9 +1,9 @@
 @font-face {
-	font-family: "Roboto";
-	src: url("../fonts/Roboto/Roboto.eot");
-	src: url("../fonts/Roboto/Roboto.eot?#iefix")format("embedded-opentype"),
-	url("../fonts/Roboto/Roboto.woff") format("woff"),
-	url("../fonts/Roboto/Roboto.ttf") format("truetype");
+	font-family: "RobotoRegular";
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+	src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix")format("embedded-opentype"),
+	url("../fonts/RobotoRegular/RobotoRegular.woff") format("woff"),
+	url("../fonts/RobotoRegular/RobotoRegular.ttf") format("truetype");
 	font-style: normal;
 	font-weight: normal;
 }
