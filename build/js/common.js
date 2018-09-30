@@ -1,5 +1,15 @@
 $(document).ready(function() {
 
+	$('.vertical-slider').slick({
+		vertical: true,
+		verticalSwiping: true,
+		infinite: false,
+		speed: 500,
+		arrows: false,
+		dots: true,
+		appendDots: $('.dotted-slide'),
+	});
+
 	// ---- *** ---
 
 	/* Popup Window */
@@ -20,35 +30,6 @@ $(document).ready(function() {
 		var container = $(".log-in");
 		if (container.has(e.target).length === 0){
 			$('.log-in__info').removeClass('active');
-		}
-	});
-
-	$('.slide-section').owlCarousel({
-		loop: false,
-		singleItem:true,
-		nav:true,
-		margin: 1,
-		autoplayTimeout: 1500,
-		navText : ['',''],
-		autoplayHoverPause:true,
-		smartSpeed: 300,
-		items:1,
-		responsive:{
-			0:{
-				items:1
-			},
-			600:{
-				items:1
-			},
-			640:{
-				items:1
-			},
-			900:{
-				items:1
-			},
-			1000:{
-				items:1
-			}
 		}
 	});
 
