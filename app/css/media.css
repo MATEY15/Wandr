@@ -159,3 +159,16 @@
 @media only screen and (min-width : 1200px) {
 
 }
+
+@media screen and (max-width: 992px),screen and (max-height:750px) {
+    .recent_work_slider{
+        width:207px;
+        height: 420px;
+        padding: 48px 12px
+    }
+}
+@media screen and (max-width: 992px),screen and (max-height:750px) {
+    .recent_work_images {
+        margin-top:-210px
+    }
+}
