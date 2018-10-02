@@ -76,7 +76,7 @@ $(document).ready(function() {
  //  centerPadding: '60px',
  //  variableWidth: true
 	// });
-
+function	startInstagram(){
 	$('.instagram-carousel').owlCarousel({
 		loop:true,
 		margin:25,
@@ -89,16 +89,20 @@ $(document).ready(function() {
 		smartSpeed: 1000,
 		responsive:{
 			0:{
-				items:1
+				items:1,
+				margin:10
 			},
-			600:{
-				items:3
+			400:{
+				items:5,
+				margin:25
 			},
 			1000:{
 				items:5
 			}
 		}
 	});
+}
+startInstagram();
 
 	// ---- *** ---
 
@@ -123,4 +127,8 @@ $(document).ready(function() {
 	// 	}
 	// });
 
+// $( window ).resize(function() {
+//   	startInstagram();
+//   	alert('YES');
+// });
 });

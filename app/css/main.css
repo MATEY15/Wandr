@@ -162,7 +162,6 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	margin-bottom: 22px;
 }
 .content-header p {
-	max-width: 524px;
 	color: #ffffff;
 	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
@@ -170,6 +169,7 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	line-height: 32px;
 	letter-spacing: 0.25px;
 	margin-bottom: 83px;
+	white-space: pre-line;
 }
 .content-header .brilliant {
 	margin-right: 16px;
@@ -224,6 +224,11 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	-webkit-background-size: contain;
 	background-size: contain;
 }
+.person-img {
+	position: absolute;
+	top: 0;
+	right: -125px;
+}
 
 .wrapper__bg-dotted {
 	position: relative;
@@ -261,7 +266,7 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	float: left;
 	margin-right: 20px;
 }
-.social-link ul li:last-chold {
+.social-link ul li:last-child {
 	margin-right: 0;
 }
 .social-link__icons {
@@ -315,6 +320,12 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	width: 12px;
 	height: 11px;
 	background-image: url(../img/Twitter.svg);
+}
+.icons-socials.icons-twitter {
+	-webkit-transform: translate(-40%, -42%);
+	-ms-transform: translate(-40%, -42%);
+	-o-transform: translate(-40%, -42%);
+	transform: translate(-40%, -42%);
 }
 
 /* MAIN STYLE =====================
@@ -485,7 +496,7 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	top: 0;
 	right: 45px;
 	content: "";
-	max-width: 672px;
+	max-width: 658px;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -683,6 +694,7 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	top: 80px !important;
 }
 .items-week-center {
+	position: relative;
 	width: 100%;
 	max-width: 480px;
 	height: 580px;
@@ -690,9 +702,21 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	border-radius: 10px;
 	padding: 9px 10px;
 }
+.items-week-center::before {
+	position: absolute;
+	bottom: -36px;
+	left: -25px;
+	content: "IGM";
+	height: 250px;
+	width: 290px;
+	color: #fff;
+	background: #ccc;
+	z-index: 10;
+}
 .week-center-gradient {
 	position: relative;
-	width: 460px;
+	width: 100%;
+	max-width: 460px;
 	height: 560px;
 	padding: 11px 10px;
 	border-radius: 10px;
@@ -1057,6 +1081,9 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	left: 0;
 	width: 100%;
 }
+.slide-container .recent_work_images {
+	display: none;
+}
 .scroller_screen.scroll_start .recent_work_images {
 	position: fixed;
 }
@@ -1094,6 +1121,10 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	top: auto;
 	bottom: 50vh;
 	margin-top: 0;
+	-webkit-transform: translate(0, 0%);
+	-ms-transform: translate(0, 0%);
+	-o-transform: translate(0, 0%);
+	transform: translate(0, 0%);
 }
 .items__recent-slide {
 	position: relative;
@@ -1614,10 +1645,18 @@ p.slider-content_description {
 	-ms-flex-direction: row;
 	-o-flex-direction: row;
 	flex-direction: row;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
 	justify-content: space-between;
 }
-.accordeon dl {
+.accordeon-item {
 	max-width: 568px;
+	width: 100%;
+}
+.accordeon dl {
 	width: 100%;
 	margin-bottom: 20px;
 }
