@@ -215,9 +215,13 @@
 		margin-top: 20px;
 	}
 	.wrapper__instagram-carousel .item.item-active {
-		width: 300px;
+		width: 310px;
 		margin-top: 5px;
 	}
+	.item-active .inst-img__overfow {
+    width: 280px;
+    height: 280px;
+}
 	.form-input,
 	.form-submit {
 		float: none;

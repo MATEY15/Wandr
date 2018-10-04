@@ -501,14 +501,26 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	border: 1px solid #dddddd;
 	margin-bottom: 30px;
 }
-.items__problem-solution:before {
+/*.items__problem-solution:before {
+	position: absolute;
+	top: 0;
+	right: 45px;
+	content: "";
+	display: block;
+	max-width: 658px;
+	width: 100%;
+	height: 100%;
+	background: #dbf0f0;
+	z-index: 10;
+}*/
+.items__problem-solution:before  {
 	position: absolute;
 	top: 0;
 	right: 45px;
 	content: "";
 	max-width: 658px;
-	display: block;
 	width: 100%;
+	display: block;
 	height: 100%;
 	background: #f3f9f9;
 }
@@ -545,12 +557,28 @@ input:focus:-ms-input-placeholder,textarea:focus:-ms-input-placeholder      {opa
 	display: -o-flex;
 	display: flex;
 	justify-content: center;
+	z-index: 20;
 }
 .item-description__problem-solution {
 	position: relative;
 	width: 58%;
 	max-width: 480px;
 	margin-left: 96px;
+	/*opacity: 0;*/
+}
+.items__problem-solution.animation-start .item-description__problem-solution {
+	animation: animate-description 0.0001s ease-out forwards;
+	-webkit-animation-delay: 1s;
+	-o-animation-delay: 1s;
+	animation-delay: 1s;
+}
+@keyframes animate-description {
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
 }
 .item-description__problem-solution h4 {
 	color: #000000;
@@ -1520,6 +1548,13 @@ p.slider-content_description {
 /* Testimonials ==============
 ==================================*/
 
+.slide-testimonials .item {
+	padding-bottom: 20px;
+}
+.slide-testimonials .owl-nav,
+.slide-testimonials .owl-dots {
+	display: none;
+}
 .testimonials {
 	position: relative;
 	padding-top: 144px;
@@ -1597,6 +1632,7 @@ p.slider-content_description {
 	width: 90px;
 	height: 90px;
 	border-radius: 50%;
+	overflow: hidden;
 }
 .quote-author__img-item img {
 	position: absolute;
@@ -1963,24 +1999,24 @@ p.slider-content_description {
 	transition: all .5s ease-out;
 }
 .item-active .inst-img__overfow {
-    width: 420px;
-    height: 420px;
+	width: 420px;
+	height: 420px;
 }
 .inst-img__overfow {
-    overflow: hidden;
-    width: 246px;
-    height: 246px;
-    position: relative;
+	overflow: hidden;
+	width: 246px;
+	height: 246px;
+	position: relative;
 }
 .inst-img img {
 	position: absolute;
 	left: 50%;
-  top: 50%;
-  height: 100%;
-  width: auto;
-  -webkit-transform: translate(-50%,-50%);
-      -ms-transform: translate(-50%,-50%);
-          transform: translate(-50%,-50%);
+	top: 50%;
+	height: 100%;
+	width: auto;
+	-webkit-transform: translate(-50%,-50%);
+	-ms-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
 }
 .wrapper__instagram-carousel .item.item-active {
 	margin-top: 0;
