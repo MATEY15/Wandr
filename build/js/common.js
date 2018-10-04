@@ -55,17 +55,31 @@ $(document).ready(function() {
 		$(this).parents(".accordeon").find("dd").not(this).slideUp().prev().removeClass("active");
 		$(this).next().not(":visible").slideDown().prev().addClass("active");
 	});
-	$(".accordeon dd").first().show();
+	//$(".accordeon dd").first().show();
 
-	$('.vertical-slider').slick({
-		vertical: true,
-		verticalSwiping: true,
-		infinite: false,
-		speed: 500,
-		arrows: false,
-		dots: true,
-		appendDots: $('.dotted-slide'),
+	// $('.vertical-slider').slick({
+	// 	vertical: true,
+	// 	verticalSwiping: true,
+	// 	infinite: false,
+	// 	speed: 500,
+	// 	arrows: false,
+	// 	dots: true,
+	// 	appendDots: $('.dotted-slide'),
+	// });
+
+
+	$( window ).resize(function() {
+		widthInstagram()
 	});
+
+	function widthInstagram() {
+		var countBlock = $('.wrapper__instagram-carousel .item').length;
+		var result = (countBlock) * 300 + 450;
+		$('.wrapper_items_instagram').css({
+			'width' : result + "px"
+		});
+	}widthInstagram();
+	
 
 	// $('.instagram-carousel').slick({
 	// 	dots: false,

@@ -22,7 +22,7 @@ gulp.task('css', function(){
 /* Images Build */
 
 gulp.task('img', function(){
-	gulp.src('app/img/**/*')
+	return gulp.src('app/img/**/*')
 		// .pipe(imagemin({
 		// 	progressive: true,
 		// 	svgoPlugins: [{removeViewBox: false}],
